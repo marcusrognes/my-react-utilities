@@ -4,6 +4,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppScreen from '../src/AppScreen';
 import ModalScreen from '../src/ModalScreen';
 import AppBar from 'material-ui/AppBar';
+import ModalScreenHeader from "../src/ModalScreen/Header/index";
+import {IconButton} from "material-ui";
+import CloseIcon from 'material-ui/svg-icons/navigation/close';
 
 storiesOf('App screen', module)
 	.add('Bare', () => (
@@ -48,23 +51,16 @@ storiesOf('App screen', module)
 
 storiesOf('Modal screen', module)
 	.add('Bare', () => (
-		<AppScreen>
-			<h1>
-				App layout
-			</h1>
-			<div style={{
-				padding: '20px'
-			}}>
-				<div style={{
-					height: (window.innerHeight + 200) + 'px',
-					width: '200px',
-					background: 'red'
-				}}/>
-			</div>
-			<ModalScreen>
-				<h3>
-					This is in a modal screen!
-				</h3>
+		<MuiThemeProvider>
+			<AppScreen
+				before={<AppBar title="With header"/>}
+				contentStyle={{
+					top: '64px'
+				}}
+			>
+				<h1>
+					App layout
+				</h1>
 				<div style={{
 					padding: '20px'
 				}}>
@@ -74,8 +70,22 @@ storiesOf('Modal screen', module)
 						background: 'red'
 					}}/>
 				</div>
-			</ModalScreen>
-		</AppScreen>
+				<ModalScreen>
+					<h3>
+						This is in a modal screen!
+					</h3>
+					<div style={{
+						padding: '20px'
+					}}>
+						<div style={{
+							height: (window.innerHeight + 200) + 'px',
+							width: '200px',
+							background: 'red'
+						}}/>
+					</div>
+				</ModalScreen>
+			</AppScreen>
+		</MuiThemeProvider>
 	))
 	.add('With header', () => (
 		<MuiThemeProvider>
@@ -97,7 +107,22 @@ storiesOf('Modal screen', module)
 						background: 'red'
 					}}/>
 				</div>
-				<ModalScreen>
+				<ModalScreen
+					before={<ModalScreenHeader
+						backButton={<IconButton
+							style={{
+								width: '64px',
+								height: '64px'
+							}}
+						>
+							<CloseIcon/>
+						</IconButton>}
+						title="With header"
+					/>}
+					contentStyle={{
+						top: '64px'
+					}}
+				>
 					<h3>
 						This is in a modal screen!
 					</h3>
