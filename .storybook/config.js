@@ -4,7 +4,7 @@ import InjectTapEventPlugin from 'react-tap-event-plugin';
 InjectTapEventPlugin();
 
 function loadStories() {
-	require('../.stories');
+	require('../.stories/Layouts');
 }
 
 configure(loadStories, module);
