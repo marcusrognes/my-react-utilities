@@ -5,6 +5,7 @@ InjectTapEventPlugin();
 
 function loadStories() {
 	require('../.stories/Layouts');
+	require('../.stories/Tables');
 }
 
 configure(loadStories, module);
