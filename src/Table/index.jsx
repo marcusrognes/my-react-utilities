@@ -13,9 +13,7 @@ class Table extends Component {
 			>
 				{schema.map((s, hi) => <div
 					key={hi}
-					style={{
-						width: s.width
-					}}
+					style={s.style}
 					className="table__header__element table__cell"
 				>
 					{s.label}
@@ -28,9 +26,7 @@ class Table extends Component {
 			>
 				{schema.map((s, si) => <div
 					key={si}
-					style={{
-						width: s.width
-					}}
+					style={s.style}
 					className={'table__row__element table__cell ' + (s.className || '')}
 				>
 					{s.convert && s.convert(d[s.name]) || d[s.name]}

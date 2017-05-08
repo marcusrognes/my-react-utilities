@@ -9,7 +9,9 @@ const schema = [
 	{
 		label: 'Name',
 		name: 'name',
-		width: '60%',
+		style: {
+			width: '60%',
+		}
 	},
 	{
 		label: 'Created at',
