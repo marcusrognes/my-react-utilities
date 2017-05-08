@@ -13,9 +13,33 @@ const schema = [
 		value: 'Test',
 	},
 	{
+		label: 'Password',
+		name: 'password',
+		type: 'password',
+		value: 'Test',
+	},
+	{
+		label: 'Textarea',
+		name: 'textarea',
+		type: 'textarea',
+		value: 'Test',
+	},
+	{
+		label: 'Tags',
+		name: 'tags',
+		type: 'tags',
+		value: ['Tag 1', 'Tag 2'],
+	},
+	{
 		label: 'Created at',
 		name: 'createdAt',
 		type: 'date',
+		value: new Date(),
+	},
+	{
+		label: 'Time',
+		name: 'time',
+		type: 'time',
 		value: new Date(),
 	}
 ];
