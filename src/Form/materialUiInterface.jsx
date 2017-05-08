@@ -6,6 +6,7 @@ import {
 import FileField from './fields/FileField';
 import TagField from './fields/TagField';
 import MenuItem from 'material-ui/MenuItem';
+import SelectModalField from "./fields/SelectModalField";
 
 const materialUiInterface = {
 	text: {
@@ -60,6 +61,9 @@ const materialUiInterface = {
 	autoComplete: {
 		fieldType: FormsyAutoComplete,
 		fullWidth: true
+	},
+	selectModal: {
+		fieldType: SelectModalField,
 	},
 	custom: {},
 	_generateChildren: (options) => {

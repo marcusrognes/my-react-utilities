@@ -55,6 +55,13 @@ const schema = [
 		value: new Date(),
 	},
 	{
+		label: 'Select modal',
+		name: 'selectModal',
+		type: 'selectModal',
+		title: 'Test data',
+		value: [],
+	},
+	{
 		label: 'Time',
 		name: 'time',
 		type: 'time',

@@ -1,0 +1,14 @@
+.select-modal-field {
+	margin: 12px 0;
+	width: 100%;
+	clear: both;
+
+	&__label {
+		margin-bottom: 6px;
+		font-size: 12px;
+		line-height: 22px;
+		pointer-events: none;
+		user-select: none;
+		color: rgb(0, 188, 212);
+	}
+}
