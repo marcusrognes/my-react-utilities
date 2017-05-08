@@ -3,7 +3,7 @@ import './TableStyle.scss';
 
 class Table extends Component {
 	render() {
-		const {schema, data, hideHeader, className} = this.props;
+		const {schema, data, hideHeader, className, onClickElement} = this.props;
 
 		return <div
 			className={'table ' + className}
@@ -20,8 +20,14 @@ class Table extends Component {
 				</div>)}
 			</div>}
 
-			{data.map((d, di) => <div
+			{data.map((d, di) => <a
 				key={di}
+				href="#"
+				onTouchTap={(e) => {
+					e.preventDefault();
+
+					onClickElement(d);
+				}}
 				className="table__row"
 			>
 				{schema.map((s, si) => <div
@@ -31,7 +37,7 @@ class Table extends Component {
 				>
 					{s.convert && s.convert(d[s.name]) || d[s.name]}
 				</div>)}
-			</div>)}
+			</a>)}
 		</div>;
 	}
 }
@@ -41,6 +47,8 @@ Table.defaultProps = {
 	data: [],
 	hideHeader: false,
 	className: '',
+	onClickElement: (element) => {
+	},
 };
 
 export default Table;
