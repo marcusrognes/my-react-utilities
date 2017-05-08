@@ -1,0 +1,81 @@
+@import '../../scss/variables.scss';
+
+.select-documents-modal {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 100px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1100;
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(#333, 0.6);
+	}
+	&__wrapper {
+		z-index: 1;
+		flex: 0 1 380px;
+		padding: 0;
+		background: white;
+		&__header {
+			position: relative;
+			width: 100%;
+			height: 38px;
+			border-bottom: 1px solid lightgray;
+			&__back-button {
+				cursor: pointer;
+				background: none;
+				height: 38px;
+				width: 38px;
+				text-align: center;
+				padding: 0;
+				margin: 0;
+				border: none;
+				border-right: 1px solid lightgray;
+			}
+			&__search-input {
+				margin: 0;
+				padding: 0 0 0 12px;
+				position: absolute;
+				top: 0;
+				width: calc(100% - 38px);
+				border: none;
+				left: 38px;
+				height: 38px;
+				background: none;
+			}
+		}
+		&__content {
+			width: 100%;
+			&__item {
+				border-bottom: 1px solid lightgray;
+				position: relative;
+				&__button {
+					display: block;
+					background: none;
+					border: 0;
+					outline: none;
+					box-shadow: none;
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					cursor: pointer;
+				}
+				&__label {
+					padding: 12px;
+				}
+			}
+		}
+	}
+}
