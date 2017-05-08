@@ -23,8 +23,9 @@ class Table extends Component {
 			{data.map((d, di) => <a
 				key={di}
 				href="#"
-				onTouchTap={(e) => {
+				onClick={(e) => {
 					e.preventDefault();
+					e.stopPropagation();
 
 					onClickElement(d);
 				}}

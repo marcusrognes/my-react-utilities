@@ -60,6 +60,9 @@ storiesOf('Table', module)
 				<Table
 					schema={schema}
 					data={data}
+					onClickElement={(element) => {
+						console.log(element);
+					}}
 				/>
 			</AppScreen>
 		</MuiThemeProvider>
