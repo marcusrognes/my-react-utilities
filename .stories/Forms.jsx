@@ -31,6 +31,24 @@ const schema = [
 		value: ['Tag 1', 'Tag 2'],
 	},
 	{
+		label: 'Style',
+		name: 'name',
+		type: 'text',
+		value: 'Half width',
+		style: {
+			width: '50%'
+		},
+	},
+	{
+		label: 'Style',
+		name: 'name',
+		type: 'text',
+		value: 'Half width',
+		style: {
+			width: '50%'
+		},
+	},
+	{
 		label: 'Created at',
 		name: 'createdAt',
 		type: 'date',
