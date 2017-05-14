@@ -27,6 +27,8 @@
     "material-ui": "^0.17.0",
     "react": "^15.2.1",
     "react-addons-css-transition-group": "^15.4.2",
-    "react-tag-input": "^4.7.2"
+    "react-dom": "^15.5.4",
+    "react-tag-input": "^4.7.2",
+    "react-tap-event-plugin": "^2.0.1"
   }
 }
