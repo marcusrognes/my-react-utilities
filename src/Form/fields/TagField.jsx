@@ -63,8 +63,8 @@ const TagField = React.createClass({
 	},
 
 	render() {
-		const {tags, suggestions, addString} = this.state;
-		const {label} = this.props;
+		const {tags, suggestions} = this.state;
+		const {label, addString} = this.props;
 
 		return <div
 			className="tag-field"
